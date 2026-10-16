@@ -6,13 +6,11 @@
   "4": "auth-form.tsx",
   "5": "compilerOptions",
   "6": "app/page.tsx",
-  "7": "obligations/page.tsx",
-  "8": "layout.tsx",
+  "7": "createSupabaseServerClient",
   "9": "Siklo — Money Tracker for Savings",
   "10": "AGENTS.md",
   "11": "dashboard/page.tsx",
   "12": "next-env.d.ts",
   "13": "funding-sources/actions.ts",
-  "14": "income/actions.ts",
   "15": "postcss.config.mjs"
 }

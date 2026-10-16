@@ -36,9 +36,9 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/page.tsx": {
-    "mtime": 1792142469.840286,
-    "seen": 1792142578.1383986,
-    "ast_hash": "504a539cafbc591b8e2a6a0f4619f06a",
+    "mtime": 1792157404.8598044,
+    "seen": 1792157411.8012094,
+    "ast_hash": "38f82232688b2d92555d2eec24ccb1c5",
     "semantic_hash": ""
   },
   "src/app/layout.tsx": {
@@ -48,9 +48,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1792127316.5810611,
-    "seen": 1792127351.538216,
-    "ast_hash": "f74a735eac356765628585e0d917e25f",
+    "mtime": 1792157404.8608096,
+    "seen": 1792157411.8032758,
+    "ast_hash": "0d38e6c49a515270ed0314ff7b94e6c0",
     "semantic_hash": ""
   },
   "src/app/setup/page.tsx": {
@@ -138,15 +138,15 @@
     "semantic_hash": ""
   },
   "DESIGN.md": {
-    "mtime": 1792145061.7828078,
-    "seen": 1792145128.5758495,
-    "ast_hash": "5eb792fc8b9616265e2ec01f532dc27b",
+    "mtime": 1792158686.6930125,
+    "seen": 1792158737.8520007,
+    "ast_hash": "cbe827204c89afa4eaf83014bb6dd355",
     "semantic_hash": ""
   },
   "PROMPTS.md": {
-    "mtime": 1792141087.0813901,
-    "seen": 1792141119.0304112,
-    "ast_hash": "c465e6cfb1c611470e9166bf112c4cb8",
+    "mtime": 1792158686.695013,
+    "seen": 1792158737.8520007,
+    "ast_hash": "62bd33a652e6a69aa0d45bf5f1f80615",
     "semantic_hash": ""
   },
   "README.md": {
@@ -156,9 +156,9 @@
     "semantic_hash": ""
   },
   "design-system/money-tracker-for-savings/MASTER.md": {
-    "mtime": 1792131483.2677293,
-    "seen": 1792131497.692092,
-    "ast_hash": "2be4469b5d974f5899687634dea5b1b5",
+    "mtime": 1792158686.6940193,
+    "seen": 1792158737.8529966,
+    "ast_hash": "43c5c4e3d79af2ee08b6590a97a60247",
     "semantic_hash": ""
   },
   "next-env.d.ts": {
@@ -168,15 +168,15 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/funding-sources-panel.tsx": {
-    "mtime": 1792144156.1289585,
-    "seen": 1792144201.1744843,
-    "ast_hash": "327bb4c3a669d25ed5bcfca03a56d8d6",
+    "mtime": 1792156925.434967,
+    "seen": 1792156939.3906364,
+    "ast_hash": "a037ee95f5343c0259674efe5984f66d",
     "semantic_hash": ""
   },
   "src/app/funding-sources/actions.ts": {
-    "mtime": 1792132998.8118365,
-    "seen": 1792133015.0694325,
-    "ast_hash": "3e229398d535df90cf43ea322c58b75a",
+    "mtime": 1792157052.6139436,
+    "seen": 1792157059.645798,
+    "ast_hash": "64a9762e6bd7b15e18cc8e255813a9b2",
     "semantic_hash": ""
   },
   "src/components/scroll-progress.tsx": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/income/page.tsx": {
-    "mtime": 1792142337.864086,
-    "seen": 1792142401.0891113,
-    "ast_hash": "ee65c466557bf15a05137f85df992cad",
+    "mtime": 1792156925.4369812,
+    "seen": 1792156939.3916342,
+    "ast_hash": "c4d9bdcce1fb0a8098fddb951e593bfc",
     "semantic_hash": ""
   },
   "src/app/dashboard/obligations/actions.ts": {
@@ -336,15 +336,15 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/obligations/page.tsx": {
-    "mtime": 1792142337.8670933,
-    "seen": 1792142401.091112,
-    "ast_hash": "3f78181b47a8dec8fd022cbb49a7e300",
+    "mtime": 1792156925.4359784,
+    "seen": 1792156939.3926349,
+    "ast_hash": "ea5612ba651ddd25d02d17cc7a7bc377",
     "semantic_hash": ""
   },
   "src/app/dashboard/workspace-nav.tsx": {
-    "mtime": 1792142491.8730352,
-    "seen": 1792142578.1383986,
-    "ast_hash": "4d41054c29d076d586b92cce880b5ade",
+    "mtime": 1792156925.429949,
+    "seen": 1792156939.3926349,
+    "ast_hash": "db0cff7ec6264c9a79502138ae988ef6",
     "semantic_hash": ""
   },
   "src/app/dashboard/funding-source-row.tsx": {
@@ -363,6 +363,12 @@
     "mtime": 1792155640.4243114,
     "seen": 1792155808.0195742,
     "ast_hash": "0f8aa602547b154dc06be77b007c51d2",
+    "semantic_hash": ""
+  },
+  "src/app/dashboard/accounts/page.tsx": {
+    "mtime": 1792156925.437979,
+    "seen": 1792156939.3896375,
+    "ast_hash": "b0be89a142108a6dd90a8ccc5420dd74",
     "semantic_hash": ""
   }
 }

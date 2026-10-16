@@ -123,22 +123,22 @@ export default async function Home() {
 
           <section className="summary-grid reveal" aria-label="October 16 to 31 cutoff summary">
             <article className="summary-card">
-              <div className="summary-card-top"><span>Cutoff income</span><span className="summary-icon summary-blue"><ArrowNarrowDownIcon size={16} /></span></div>
+              <div className="summary-card-top"><span>Cutoff income</span><span className="summary-icon summary-blue"><ArrowNarrowDownIcon size={34} /></span></div>
               <strong>₱34,500<span>.00</span></strong>
               <small>Expected on Oct 30</small>
             </article>
             <article className="summary-card">
-              <div className="summary-card-top"><span>Bills to reserve</span><span className="summary-icon summary-amber"><LayersIcon size={16} /></span></div>
+              <div className="summary-card-top"><span>Bills to reserve</span><span className="summary-icon summary-amber"><LayersIcon size={34} /></span></div>
               <strong>₱3,200<span>.00</span></strong>
               <small>1 payment assigned</small>
             </article>
             <article className="summary-card">
-              <div className="summary-card-top"><span>Savings plan</span><span className="summary-icon summary-green"><ArrowNarrowUpIcon size={16} /></span></div>
+              <div className="summary-card-top"><span>Savings plan</span><span className="summary-icon summary-green"><ArrowNarrowUpIcon size={34} /></span></div>
               <strong>₱5,000<span>.00</span></strong>
               <small>₱2,500 transferred so far</small>
             </article>
             <article className="summary-card summary-card-highlight">
-              <div className="summary-card-top"><span>Spent this cutoff</span><span className="summary-icon summary-violet"><WalletIcon size={16} /></span></div>
+              <div className="summary-card-top"><span>Spent this cutoff</span><span className="summary-icon summary-violet"><WalletIcon size={34} /></span></div>
               <strong>₱1,190<span>.00</span></strong>
               <small>Across 3 purchases</small>
             </article>

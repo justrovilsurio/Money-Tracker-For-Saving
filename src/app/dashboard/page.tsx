@@ -247,13 +247,13 @@ export default async function DashboardPage() {
 
         <section className="summary-grid" aria-label="Cutoff totals">
           <SummaryCard label="Income received" value={income ? formatMoney(cutoffIncome, currencyCode) : "—"}
-            detail={income ? "Saved for this cutoff" : "No income saved for this cutoff"} tone="blue" icon={<WalletIcon size={16} />} />
+            detail={income ? "Saved for this cutoff" : "No income saved for this cutoff"} tone="blue" icon={<WalletIcon size={34} />} />
           <SummaryCard label="Bills to reserve" value={formatMoney(reservedBills, currencyCode)}
-            detail={`${((reserveData ?? []) as AmountRow[]).length} reserve contribution${((reserveData ?? []) as AmountRow[]).length === 1 ? "" : "s"} from this cutoff`} tone="amber" icon={<CreditCardIcon size={16} />} />
+            detail={`${((reserveData ?? []) as AmountRow[]).length} reserve contribution${((reserveData ?? []) as AmountRow[]).length === 1 ? "" : "s"} from this cutoff`} tone="amber" icon={<CreditCardIcon size={34} />} />
           <SummaryCard label="Planned savings" value={formatMoney(plannedSavings, currencyCode)}
-            detail={savingsData ? "Savings target for this cutoff" : "No savings target set"} tone="green" icon={<ChartBarIcon size={16} />} />
+            detail={savingsData ? "Savings target for this cutoff" : "No savings target set"} tone="green" icon={<ChartBarIcon size={34} />} />
           <SummaryCard label="Recorded spending" value={formatMoney(recordedSpending, currencyCode)}
-            detail={`${formatDate(period.start)} – ${formatDate(period.end)}`} tone="violet" icon={<ShoppingCartIcon size={16} />} />
+            detail={`${formatDate(period.start)} – ${formatDate(period.end)}`} tone="violet" icon={<ShoppingCartIcon size={34} />} />
         </section>
 
         <section className="cutoff-pair-panel" aria-labelledby="cutoff-pair-title">
@@ -307,9 +307,12 @@ export default async function DashboardPage() {
           <section className="panel overview-panel overview-sources" aria-labelledby="sources-heading">
             <div className="panel-heading">
               <div><p className="eyebrow">ACCOUNTS</p><h2 id="sources-heading">Accounts</h2></div>
-              <span className="overview-count">{sources.length} active</span>
+              <div className="overview-sources-actions">
+                <span className="overview-count">{sources.length} active</span>
+                <Link className="text-link" href="/dashboard/accounts">Manage<ArrowNarrowRightIcon size={14} /></Link>
+              </div>
             </div>
-            <FundingSourcesPanel sources={sources} loadError={Boolean(sourceError)} currencyCode={currencyCode} />
+            <FundingSourcesPanel sources={sources} loadError={Boolean(sourceError)} currencyCode={currencyCode} showHeading={false} showForm={false} />
           </section>
         </div>
 

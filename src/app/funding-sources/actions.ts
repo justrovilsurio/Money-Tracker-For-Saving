@@ -68,6 +68,7 @@ export async function createFundingSourceAction(
   if (error) return { error: "Could not save this account. Check the connection and try again." };
 
   revalidatePath("/dashboard");
+  revalidatePath("/dashboard/accounts");
   revalidatePath("/setup");
   return { message: "Account added." };
 }
@@ -114,5 +115,6 @@ export async function updateFundingSourceAction(
   }).eq("id", parsed.data.id).eq("user_id", userId);
   if (error) return { error: "Could not update this account. Check the connection and try again." };
   revalidatePath("/dashboard");
+  revalidatePath("/dashboard/accounts");
   return { message: "Account details updated." };
 }

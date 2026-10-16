@@ -103,7 +103,7 @@ export default async function ObligationsPage() {
 
         {sources.length === 0 ? (
           <div className="setup-status obligation-no-sources" role="status">
-            Add an account before adding a payment. <Link href="/dashboard">Go to accounts</Link>
+            Add an account before adding a payment. <Link href="/dashboard/accounts">Go to accounts</Link>
           </div>
         ) : <ObligationForm sources={sources} />}
 

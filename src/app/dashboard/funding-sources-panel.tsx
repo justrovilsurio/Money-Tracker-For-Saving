@@ -12,20 +12,22 @@ export function FundingSourcesPanel({
   sources,
   loadError = false,
   currencyCode = "PHP",
-}: { sources: FundingSource[]; loadError?: boolean; currencyCode?: string }) {
+  showHeading = true,
+  showForm = true,
+}: { sources: FundingSource[]; loadError?: boolean; currencyCode?: string; showHeading?: boolean; showForm?: boolean }) {
   const [state, action, pending] = useActionState(createFundingSourceAction, initialState);
   const [kind, setKind] = useState<FundingSource["kind"]>("bank");
   const isCreditAccount = kind === "card" || kind === "loan";
 
   return (
-    <section className="funding-sources-panel" aria-labelledby="funding-sources-heading">
-      <div>
+    <section className="funding-sources-panel" aria-label={showHeading ? undefined : "Saved accounts"} aria-labelledby={showHeading ? "funding-sources-heading" : undefined}>
+      {showHeading ? <div>
         <p className="eyebrow">YOUR ACCOUNTS</p>
         <h2 id="funding-sources-heading">Accounts</h2>
         <p className="setup-intro">Add the banks, cards, wallets, or cash accounts you use for bills and spending.</p>
-      </div>
+      </div> : null}
       {loadError ? <p className="form-message form-error" role="alert">Accounts could not be loaded. Refresh the page and try again.</p> : null}
-      <form className="funding-source-form" action={action}>
+      {showForm ? <form className="funding-source-form" action={action}>
         <div className="funding-field">
           <label htmlFor="source-name">Account name</label>
           <input id="source-name" name="name" type="text" maxLength={80} placeholder="e.g. MariBank credit card" required />
@@ -58,10 +60,10 @@ export function FundingSourcesPanel({
         <button className="button button-primary" type="submit" disabled={pending}>
           {pending ? "Saving..." : "Add account"}
         </button>
-      </form>
+      </form> : null}
       <div className="funding-source-list" aria-live="polite">
         {sources.length === 0 ? (
-          <p className="funding-source-empty">No accounts yet. Add your first account above to start your plan.</p>
+          <p className="funding-source-empty">{showForm ? "No accounts yet. Add your first account above to start your plan." : "No accounts yet."}</p>
         ) : sources.map((source) => (
           <div className="funding-source-item" key={source.id}>
             <FundingSourceRow source={source} currencyCode={currencyCode} />

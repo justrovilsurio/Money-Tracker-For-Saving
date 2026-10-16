@@ -126,7 +126,7 @@ Credit-card statement payments can vary month to month, so their actual amount d
 
 ## 7. Navigation and screens
 
-The root route `/` is a public, signed-out sample preview. It must clearly label every example figure as illustrative and must never present sample data as a user's account. When Supabase verifies an active session, `/` redirects to the private `/dashboard` overview. Private pages share direct navigation to Overview, Cutoff income, Bills & installments, and Accounts. Saved account data is read only from the authenticated user's records.
+The root route `/` is a public, signed-out sample preview. It must clearly label every example figure as illustrative and must never present sample data as a user's account. When Supabase verifies an active session, `/` redirects to the private `/dashboard` overview. Private pages share direct navigation to Overview, Cutoff income, Bills & installments, and Accounts. The Accounts page owns account creation and editing; the overview shows saved account rows only. Saved account data is read only from the authenticated user's records.
 
 - **Dashboard:** current/upcoming cutoff summary, received income, payment due dates and reserve contributions, available credit per card, remaining loan debt, savings target/progress, recent purchases, and a clear next action.
 - **Year view:** Jan–Dec calendar or timeline with two cutoff markers per month; year switcher; totals at month and cutoff level; individual payment entries in the selected year.
@@ -155,9 +155,10 @@ Use General Sans for display headings and Switzer for interface text, labels, an
 - Keep numeric inputs readable, allow long account names to wrap, and make action buttons easy to reach without horizontal scrolling.
 
 ### Motion
-- On the signed-in overview, use a brief staggered entrance when the page loads so its cards and panels settle into view. Keep content readable immediately and avoid long delays.
+- On every signed-in page, use a brief, consistent staggered entrance for the main panel, forms, saved lists, and repeated rows. Match the overview opacity-and-y-motion treatment, keep delays short, and keep content readable immediately.
 - Use scroll-driven storytelling on a public landing/onboarding page: sections can reveal the cutoff-planning idea and sample year view as the user moves down the page.
 - In the signed-in product, prefer short transitions for opening a cutoff, updating a total, and revealing upcoming payments. Do not make users scroll through a presentation to reach their finances.
+- On the signed-in overview and sample preview, summary icons are prominent (34px artwork in 52px tone tiles). Hovering a summary card lifts the full card, icon, and text together. Apply the same restrained lift and shadow to the estimated-left-to-spend card, each of the two cutoff cards, each upcoming-payment row, each saved cutoff-income row, each bills/installment row, and each account row. Use matching card-style borders, rounded corners, 12px internal padding, and consistent gaps so row text has the same breathing room across these pages. Use transform/translate effects that do not change document layout, and honor `prefers-reduced-motion`.
 - Its Hover provides animated icon components distributed via shadcn CLI and built with Motion. Use a few appropriate icons (for example, calendar, wallet, savings) after checking each component's license and behavior. Do not rely on icons alone for meaning.
 - Honor `prefers-reduced-motion`; provide a setting or disable decorative motion when requested. Keep essential information immediately available without animation.
 - Ensure focus indicators, keyboard access, sufficient contrast, reduced-motion behavior, and mobile performance.

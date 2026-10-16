@@ -43,14 +43,16 @@ Use semantic tokens, not per-component hex values. Verify text contrast at 4.5:1
 ## Motion
 
 - Motion dial: 3/10. Use short opacity/transform transitions for menu, cutoff selection, and progress updates.
-- Scroll reveals on the landing page only; the dashboard remains immediately readable without scroll-triggered entrance states.
+- Use the same brief, staggered page-load entrance on the overview and signed-in management pages, including cutoff income, bills and installments, and accounts. Keep forms and saved rows readable immediately; do not add scroll-triggered reveals inside the signed-in workspace.
 - Honor `prefers-reduced-motion`; reduced-motion users see final states without animation.
 - Animate `opacity` and `transform`; avoid layout-changing animation for money values.
+- Summary-card hover moves the whole card and its contents together; Its Hover icons use a larger 34px/52px treatment. Reuse a subtle lift and shadow for the estimated-spend panel, both cutoff cards, payment rows, saved cutoff-income rows, bills/installment rows, and account rows. Never trigger reflow, and keep transitions minimal for reduced-motion users. Saved cutoff-income and payment rows use the same card treatment as account rows: 12px internal padding, rounded borders, and even spacing between rows.
 
 ## Page structure
 
 - Public `/`: clearly labeled sample preview for signed-out visitors. The figures are illustrative and never represent a user's records. A verified signed-in visitor is redirected to `/dashboard`.
 - Private `/dashboard`: current cutoff summary and saved upcoming payments, with persistent navigation to overview, cutoff income, bills and installments, and accounts. Every private page uses the authenticated user's Supabase data only.
+- Accounts `/dashboard/accounts`: create and update saved banks, cards, loans, wallets, and cash accounts. The overview keeps a read-only list of account rows.
 - Cutoff income `/dashboard/income`: saved and editable income plans by cutoff.
 - Bills and installments `/dashboard/obligations`: saved schedules and individual due dates, including the funding cutoff.
 - Dashboard: current cutoff balance summary, reserved bills, savings, recent activity, and next action.
