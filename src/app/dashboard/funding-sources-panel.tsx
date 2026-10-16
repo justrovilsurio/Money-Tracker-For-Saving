@@ -1,7 +1,6 @@
 "use client";
 
 import { useActionState, useState } from "react";
-import WalletIcon from "@/components/ui/wallet-icon";
 import { createFundingSourceAction, type FundingSourceState } from "@/app/funding-sources/actions";
 import { FundingSourceRow, type FundingSourceRecord } from "@/app/dashboard/funding-source-row";
 
@@ -65,7 +64,6 @@ export function FundingSourcesPanel({
           <p className="funding-source-empty">No accounts yet. Add your first account above to start your plan.</p>
         ) : sources.map((source) => (
           <div className="funding-source-item" key={source.id}>
-            <span className="funding-source-icon" aria-hidden="true"><WalletIcon size={18} /></span>
             <FundingSourceRow source={source} currencyCode={currencyCode} />
           </div>
         ))}

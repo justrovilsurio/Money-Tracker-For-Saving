@@ -10,7 +10,7 @@ import WalletIcon from "@/components/ui/wallet-icon";
 import { requireUser } from "@/lib/auth/require-user";
 import { getSupabasePublicEnv } from "@/lib/supabase/env";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
-import { WorkspaceNav } from "@/app/dashboard/workspace-nav";
+import { WorkspaceHeader } from "@/app/dashboard/workspace-nav";
 
 export const dynamic = "force-dynamic";
 
@@ -218,12 +218,7 @@ export default async function DashboardPage() {
 
   return (
     <main className="overview-page" id="main-content" tabIndex={-1}>
-      <header className="overview-topbar">
-        <Link className="brand" href="/"><span className="brand-mark">S</span><span>Siklo<span className="brand-period">.</span></span></Link>
-        <div className="overview-nav">
-          <WorkspaceNav current="overview" />
-        </div>
-      </header>
+      <WorkspaceHeader current="overview" />
 
       <div className="overview-content">
         <div className="overview-heading">
@@ -326,3 +321,6 @@ export default async function DashboardPage() {
     </main>
   );
 }
+
+
+

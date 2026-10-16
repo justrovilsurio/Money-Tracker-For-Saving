@@ -139,7 +139,11 @@ The root route `/` is a public, signed-out sample preview. It must clearly label
 
 ### Visual character
 
-Use a calm, confident money-planning interface: warm off-white or very light neutral canvas, deep ink/navy text, one restrained green for savings/positive balances, and amber/red only for attention states. Favor clear numerical hierarchy, generous spacing, compact cards, and clean charts. Avoid casino-like gradients, neon, and gamified spending cues.
+Use a calm, confident money-planning interface with the Forest Graphite (`#18251D`) and Acid Mint (`#B7FF72`) palette. Keep the canvas light and neutral, use graphite for primary text and controls, and reserve mint for primary actions, active navigation, and key highlights. Keep amber/red for attention states. Favor clear numerical hierarchy, generous spacing, compact cards, and clean charts.
+
+### Typography
+
+Use General Sans for display headings and Switzer for interface text, labels, and financial figures. Keep numeric values tabular for easy comparison and retain system sans-serif fallbacks if Fontshare is unavailable.
 
 ### Mobile-first layout and forms
 
@@ -147,9 +151,12 @@ Use a calm, confident money-planning interface: warm off-white or very light neu
 - Group every form label with its own input in a field wrapper; do not rely on CSS grid auto-placement to pair separate labels and controls. Conditional fields must not shift labels onto the wrong inputs.
 - Use full-width, at least 44px-tall controls on touch screens. Stack account fields and edit controls on narrow screens; introduce multi-column form grids only when the viewport has enough space.
 - Style selects consistently with a clear chevron, adequate right padding, visible keyboard focus, readable option contrast, and native interaction semantics.
+- On small screens, keep the brand and Sign out together in the header first row and wrap the four primary page links beneath them in a balanced two-column grid. Keep Sign out separate from the navigation links. Clearly mark the current page with both a visual active state and aria-current="page"; avoid horizontal scrolling.
 - Keep numeric inputs readable, allow long account names to wrap, and make action buttons easy to reach without horizontal scrolling.
 
-### Motion- Use scroll-driven storytelling on a public landing/onboarding page: sections can reveal the cutoff-planning idea and sample year view as the user moves down the page.
+### Motion
+- On the signed-in overview, use a brief staggered entrance when the page loads so its cards and panels settle into view. Keep content readable immediately and avoid long delays.
+- Use scroll-driven storytelling on a public landing/onboarding page: sections can reveal the cutoff-planning idea and sample year view as the user moves down the page.
 - In the signed-in product, prefer short transitions for opening a cutoff, updating a total, and revealing upcoming payments. Do not make users scroll through a presentation to reach their finances.
 - Its Hover provides animated icon components distributed via shadcn CLI and built with Motion. Use a few appropriate icons (for example, calendar, wallet, savings) after checking each component's license and behavior. Do not rely on icons alone for meaning.
 - Honor `prefers-reduced-motion`; provide a setting or disable decorative motion when requested. Keep essential information immediately available without animation.
@@ -247,3 +254,5 @@ The app's first implementation must not silently use demo financial data as a re
 The official `graphifyy` CLI and Codex skill are installed. The CLI is installed in the local Codex Python runtime; its `Scripts` directory may not be on a VS Code terminal's `PATH`. If the `graphify` command is unavailable in a terminal, run the executable from the Python `Scripts` directory or install Graphify in the Python environment you use for development. The project skill is under `.codex/skills/graphify/`, with its repository guidance in `AGENTS.md` and hook registration in `.codex/hooks.json`.
 
 Graphify's code mapping is local and AST-based, so it can reduce repeated broad source reads once the application has code. The repository currently has only planning documents, so build the graph after implementation begins. A graph helps navigate code; it does not remove the need to inspect relevant implementation details or validate money rules and RLS. Graphify's optional semantic extraction for non-code content can use a model, so code-only mapping is the cost-conscious workflow.
+
+

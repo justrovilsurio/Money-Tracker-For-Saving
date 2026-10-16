@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import ArrowNarrowRightIcon from "@/components/ui/arrow-narrow-right-icon";
 import { requireUser } from "@/lib/auth/require-user";
-import { WorkspaceNav } from "@/app/dashboard/workspace-nav";
+import { WorkspaceHeader } from "@/app/dashboard/workspace-nav";
 import { getSupabasePublicEnv } from "@/lib/supabase/env";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { ObligationForm, type ObligationSourceOption } from "./obligation-form";
@@ -94,7 +94,7 @@ export default async function ObligationsPage() {
 
   return (
     <main className="setup-page" id="main-content" tabIndex={-1}>
-      <WorkspaceNav current="bills" />
+      <WorkspaceHeader current="bills" />
       <section className="setup-card obligation-card">
         <Link className="income-back" href="/dashboard"><ArrowNarrowRightIcon size={14} className="icon-rotate-left" />Back to dashboard</Link>
         <p className="eyebrow">CUTOFF PLAN · STEP 3</p>
@@ -139,3 +139,4 @@ export default async function ObligationsPage() {
     </main>
   );
 }
+

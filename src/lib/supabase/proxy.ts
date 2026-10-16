@@ -10,9 +10,9 @@ function createCsp(nonce: string, supabaseOrigin: string | null) {
   return [
     "default-src 'self'",
     `script-src 'self' 'nonce-${nonce}' 'strict-dynamic'${isDevelopment ? " 'unsafe-eval'" : ""}`,
-    `style-src 'self' 'nonce-${nonce}'${isDevelopment ? " 'unsafe-inline'" : ""}`,
+    `style-src 'self' 'nonce-${nonce}' https://api.fontshare.com${isDevelopment ? " 'unsafe-inline'" : ""}`,
     "img-src 'self' data: blob:",
-    "font-src 'self'",
+    "font-src 'self' https://cdn.fontshare.com",
     `connect-src ${connectSources}`,
     "object-src 'none'",
     "base-uri 'self'",

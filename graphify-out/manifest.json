@@ -36,15 +36,15 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/page.tsx": {
-    "mtime": 1792135177.897053,
-    "seen": 1792135193.0205154,
-    "ast_hash": "07d04424a30971697e830e29a4392b0b",
+    "mtime": 1792142469.840286,
+    "seen": 1792142578.1383986,
+    "ast_hash": "504a539cafbc591b8e2a6a0f4619f06a",
     "semantic_hash": ""
   },
   "src/app/layout.tsx": {
-    "mtime": 1792110120.6401443,
-    "seen": 1792110153.9804573,
-    "ast_hash": "4d7f130f03a23961e24292982e51faba",
+    "mtime": 1792145112.4101305,
+    "seen": 1792145128.5568087,
+    "ast_hash": "5a0bbbfd1eb1745880ca2743e53167d7",
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
@@ -114,9 +114,9 @@
     "semantic_hash": ""
   },
   "src/lib/supabase/proxy.ts": {
-    "mtime": 1792109741.804949,
-    "seen": 1792110088.1291368,
-    "ast_hash": "10da38ef5e519546df0fe04222629171",
+    "mtime": 1792143410.2814915,
+    "seen": 1792143542.518731,
+    "ast_hash": "9bbc4d9890378f6fe42f845c512d82f5",
     "semantic_hash": ""
   },
   "src/lib/supabase/server.ts": {
@@ -138,15 +138,15 @@
     "semantic_hash": ""
   },
   "DESIGN.md": {
-    "mtime": 1792138477.9329298,
-    "seen": 1792138494.8235602,
-    "ast_hash": "00de25d758e8db6c9dbcc9a9d9af91c9",
+    "mtime": 1792145061.7828078,
+    "seen": 1792145128.5758495,
+    "ast_hash": "5eb792fc8b9616265e2ec01f532dc27b",
     "semantic_hash": ""
   },
   "PROMPTS.md": {
-    "mtime": 1792138347.486061,
-    "seen": 1792138494.8235602,
-    "ast_hash": "1b9dbf7b36c52c09111fce1b76550c62",
+    "mtime": 1792141087.0813901,
+    "seen": 1792141119.0304112,
+    "ast_hash": "c465e6cfb1c611470e9166bf112c4cb8",
     "semantic_hash": ""
   },
   "README.md": {
@@ -168,9 +168,9 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/funding-sources-panel.tsx": {
-    "mtime": 1792138347.4506555,
-    "seen": 1792138494.8017514,
-    "ast_hash": "983ece698f6aff641e6c189d58ea4545",
+    "mtime": 1792144156.1289585,
+    "seen": 1792144201.1744843,
+    "ast_hash": "327bb4c3a669d25ed5bcfca03a56d8d6",
     "semantic_hash": ""
   },
   "src/app/funding-sources/actions.ts": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/income/page.tsx": {
-    "mtime": 1792134464.5646467,
-    "seen": 1792134529.6868784,
-    "ast_hash": "c95aaa357b5a992e15c55a21a762329d",
+    "mtime": 1792142337.864086,
+    "seen": 1792142401.0891113,
+    "ast_hash": "ee65c466557bf15a05137f85df992cad",
     "semantic_hash": ""
   },
   "src/app/dashboard/obligations/actions.ts": {
@@ -336,21 +336,21 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/obligations/page.tsx": {
-    "mtime": 1792139977.9376419,
-    "seen": 1792139990.23966,
-    "ast_hash": "65fb7d746fe37da47257c275ee8948d9",
+    "mtime": 1792142337.8670933,
+    "seen": 1792142401.091112,
+    "ast_hash": "3f78181b47a8dec8fd022cbb49a7e300",
     "semantic_hash": ""
   },
   "src/app/dashboard/workspace-nav.tsx": {
-    "mtime": 1792131483.2803924,
-    "seen": 1792131497.6692007,
-    "ast_hash": "5a80a9f9e9e4b2fefce7b3b135430da9",
+    "mtime": 1792142491.8730352,
+    "seen": 1792142578.1383986,
+    "ast_hash": "4d41054c29d076d586b92cce880b5ade",
     "semantic_hash": ""
   },
   "src/app/dashboard/funding-source-row.tsx": {
-    "mtime": 1792133262.6727662,
-    "seen": 1792133279.1429644,
-    "ast_hash": "3c900dba1013fb055485d2fedb8dd68c",
+    "mtime": 1792143950.2230585,
+    "seen": 1792143994.555611,
+    "ast_hash": "54350cfd5f72fcaee68bac1014fc6454",
     "semantic_hash": ""
   },
   "src/app/dashboard/obligations/occurrence-amount-form.tsx": {
