@@ -96,7 +96,7 @@ export default async function ObligationsPage() {
     <main className="setup-page" id="main-content" tabIndex={-1}>
       <WorkspaceNav current="bills" />
       <section className="setup-card obligation-card">
-        <Link className="income-back" href="/dashboard/income"><ArrowNarrowRightIcon size={14} className="icon-rotate-left" />Back to cutoff income</Link>
+        <Link className="income-back" href="/dashboard"><ArrowNarrowRightIcon size={14} className="icon-rotate-left" />Back to dashboard</Link>
         <p className="eyebrow">CUTOFF PLAN · STEP 3</p>
         <h1>Add bills and installments.</h1>
         <p className="setup-intro">Add a single payment with its amount and due date. Payments due before the second cutoff are reserved from the previous cutoff; payments due on the second cutoff or month-end are split across both cutoffs.</p>

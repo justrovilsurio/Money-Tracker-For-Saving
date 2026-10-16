@@ -336,9 +336,9 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/obligations/page.tsx": {
-    "mtime": 1792137342.089587,
-    "seen": 1792137347.8241532,
-    "ast_hash": "cbfb8b1dec3945a829ed5f6e6bd4f76c",
+    "mtime": 1792139977.9376419,
+    "seen": 1792139990.23966,
+    "ast_hash": "65fb7d746fe37da47257c275ee8948d9",
     "semantic_hash": ""
   },
   "src/app/dashboard/workspace-nav.tsx": {
