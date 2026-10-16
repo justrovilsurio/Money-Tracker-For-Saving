@@ -240,7 +240,7 @@ export default async function DashboardPage() {
             </strong>
             <small>Latest cutoff income − payment reserves − savings target − spending through {formatDate(period.end)}</small>
           </div>
-          <Link className="overview-cta" href="/dashboard/income">{income ? "Update cutoff income" : "Add cutoff income"}<ArrowNarrowRightIcon size={15} /></Link>
+          <Link className="overview-cta" href="/dashboard/income" aria-label={income ? "Update cutoff income" : "Add cutoff income"}><span className="overview-cta-label">{income ? "Update cutoff income" : "Add cutoff income"}</span><ArrowNarrowRightIcon size={15} /></Link>
           <span className="overview-orbit overview-orbit-one" aria-hidden="true" />
           <span className="overview-orbit overview-orbit-two" aria-hidden="true" />
         </section>
@@ -256,7 +256,7 @@ export default async function DashboardPage() {
             detail={`${formatDate(period.start)} – ${formatDate(period.end)}`} tone="violet" icon={<ShoppingCartIcon size={34} />} />
         </section>
 
-        <section className="cutoff-pair-panel" aria-labelledby="cutoff-pair-title">
+        <section className="cutoff-pair-panel dashboard-scroll-reveal" aria-labelledby="cutoff-pair-title">
           <div className="panel-heading">
             <div><p className="eyebrow">BOTH PAYDAYS</p><h2 id="cutoff-pair-title">This month's cutoff plan</h2></div>
           </div>
@@ -277,7 +277,7 @@ export default async function DashboardPage() {
         </section>
 
         <div className="overview-grid">
-          <section className="panel overview-panel" aria-labelledby="upcoming-heading">
+          <section className="panel overview-panel dashboard-scroll-reveal" aria-labelledby="upcoming-heading">
             <div className="panel-heading">
               <div><p className="eyebrow">YOUR PAYMENTS</p><h2 id="upcoming-heading">Upcoming payments</h2></div>
               <Link className="text-link" href="/dashboard/obligations">Manage<ArrowNarrowRightIcon size={14} /></Link>
@@ -304,7 +304,7 @@ export default async function DashboardPage() {
             )}
           </section>
 
-          <section className="panel overview-panel overview-sources" aria-labelledby="sources-heading">
+          <section className="panel overview-panel overview-sources dashboard-scroll-reveal" aria-labelledby="sources-heading">
             <div className="panel-heading">
               <div><p className="eyebrow">ACCOUNTS</p><h2 id="sources-heading">Accounts</h2></div>
               <div className="overview-sources-actions">

@@ -1,7 +1,7 @@
 # Graph Report - Money Tracker For Saving  (2026-10-16)
 
 ## Corpus Check
-- 68 files · ~22,970 words
+- 68 files · ~23,221 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 3 file(s) not represented in the graph (top: .example 1, (none) 1, .css 1)
 
@@ -11,7 +11,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d3bf9353`
+- Built from commit: `c91a40a9`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
