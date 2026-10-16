@@ -1,0 +1,65 @@
+# Money Tracker for Savings — Interface Design System
+
+This project uses a light-first, accessibility-first adaptation of the UI Pro Max search for a personal finance dashboard. The source search suggested a modern product-demo layout, subtle scroll reveal, and trust-blue/green colors. The dark glassmorphism option is not used for primary data surfaces because financial tables and amounts need stable contrast and clear grouping.
+
+## Product feel
+
+- Calm, clear, private, and practical.
+- Users should understand the cutoff calculation at a glance.
+- Use motion to show navigation/state changes; never delay access to money data.
+
+## Tokens
+
+| Role | Token | Value |
+| --- | --- | --- |
+| Page canvas | `--background` | `#F7F8F5` |
+| Main surface | `--surface` | `#FFFFFF` |
+| Primary text | `--foreground` | `#18211F` |
+| Secondary text | `--muted-foreground` | `#596560` |
+| Primary / trust | `--primary` | `#1E40AF` |
+| Positive / savings | `--positive` | `#047857` |
+| Attention | `--warning` | `#A16207` |
+| Error | `--destructive` | `#B42318` |
+| Borders | `--border` | `#DDE3DF` |
+| Focus ring | `--ring` | `#1D4ED8` |
+
+Use semantic tokens, not per-component hex values. Verify text contrast at 4.5:1 for normal text; do not use color alone to show paid/overdue/positive state.
+
+## Typography and layout
+
+- Use a neutral sans-serif family with system fallbacks; keep financial values tabular and aligned.
+- Body text at 16px or larger, line height around 1.5. Headings use a compact, clear scale.
+- Use a consistent 4/8px spacing rhythm and a readable content width around 1200px.
+- Mobile first: no horizontal scrolling at 375px; collapse navigation and card grids deliberately.
+
+## Components and interaction
+
+- Use semantic HTML, visible labels, inline errors, clear loading feedback, and visible keyboard focus.
+- Interactive controls should have comfortable 44px minimum targets where practical.
+- Use animated icon components sourced from Its Hover where they fit the established interface; decorative icons are hidden from assistive technology, and icon-only actions need accessible names. Do not introduce Lucide icons.
+- Charts and status use text/labels in addition to color.
+- Prefer solid surfaces for tables and calculations. Reserve blur/glass effects for decorative overlays only.
+
+## Motion
+
+- Motion dial: 3/10. Use short opacity/transform transitions for menu, cutoff selection, and progress updates.
+- Scroll reveals on the landing page only; the dashboard remains immediately readable without scroll-triggered entrance states.
+- Honor `prefers-reduced-motion`; reduced-motion users see final states without animation.
+- Animate `opacity` and `transform`; avoid layout-changing animation for money values.
+
+## Page structure
+
+- Public `/`: clearly labeled sample preview for signed-out visitors. The figures are illustrative and never represent a user's records. A verified signed-in visitor is redirected to `/dashboard`.
+- Private `/dashboard`: current cutoff summary and saved upcoming payments, with persistent navigation to overview, cutoff income, bills and installments, and accounts. Every private page uses the authenticated user's Supabase data only.
+- Cutoff income `/dashboard/income`: saved and editable income plans by cutoff.
+- Bills and installments `/dashboard/obligations`: saved schedules and individual due dates, including the funding cutoff.
+- Dashboard: current cutoff balance summary, reserved bills, savings, recent activity, and next action.
+- Year plan: twelve months with two cutoff markers each and a year switcher.
+- Cutoff detail: income → bill reserve → savings → purchases → remaining-to-spend breakdown.
+- Forms: short, labeled, and grouped by user intent; errors appear beside fields.
+
+## References
+
+- Product and security requirements: [`DESIGN.md`](../../DESIGN.md)
+- Interaction prompts: [`PROMPTS.md`](../../PROMPTS.md)
+- Search source: UI Pro Max design-system result for “personal finance money management dashboard calm modern” (light-first adaptation noted above).
