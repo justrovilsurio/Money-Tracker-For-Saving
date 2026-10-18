@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import type { CSSProperties } from "react";
 import { getSupabasePublicEnv } from "@/lib/supabase/env";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { ScrollProgress } from "@/components/scroll-progress";
@@ -30,6 +31,21 @@ const spending = [
   { name: "Groceries", detail: "Today · 10:42 AM", amount: "−₱1,280", icon: WalletIcon },
   { name: "Commute", detail: "Yesterday · 8:14 AM", amount: "−₱240", icon: ArrowNarrowDownIcon },
   { name: "Coffee", detail: "Yesterday · 7:52 AM", amount: "−₱185", icon: CoffeeIcon },
+];
+
+const yearPlan = [
+  { month: "JAN", name: "January", first: 64, second: 72 },
+  { month: "FEB", name: "February", first: 58, second: 67 },
+  { month: "MAR", name: "March", first: 76, second: 62 },
+  { month: "APR", name: "April", first: 69, second: 74 },
+  { month: "MAY", name: "May", first: 82, second: 61 },
+  { month: "JUN", name: "June", first: 72, second: 80 },
+  { month: "JUL", name: "July", first: 72, second: 66 },
+  { month: "AUG", name: "August", first: 62, second: 78 },
+  { month: "SEP", name: "September", first: 78, second: 58 },
+  { month: "OCT", name: "October", first: 88, second: 73 },
+  { month: "NOV", name: "November", first: 66, second: 62 },
+  { month: "DEC", name: "December", first: 58, second: 83 },
 ];
 
 export default async function Home() {
@@ -151,15 +167,19 @@ export default async function Home() {
                 <div><p className="eyebrow">YOUR BIG PICTURE</p><h2 id="year-heading">2026 year plan</h2></div>
                 <Link className="text-link" href="/setup">View year <ArrowNarrowRightIcon size={14} /></Link>
               </div>
-              <p className="panel-description">Two cutoffs a month, planned all the way through December.</p>
-              <div className="year-months" aria-label="Monthly plan overview">
-                {[
-                  ["JUL", 72, 66], ["AUG", 62, 78], ["SEP", 78, 58], ["OCT", 88, 73], ["NOV", 66, 62], ["DEC", 58, 83],
-                ].map(([month, first, second]) => (
-                  <div className={`month-column ${month === "OCT" ? "month-current" : ""}`} key={month}>
+              <p className="panel-description">A view of both cutoff reserves across all twelve months.</p>
+              <div className="year-months" role="group" aria-label="Illustrative 2026 reserve levels by month; darker bars are the 15th cutoff and lighter bars are month-end">
+                {yearPlan.map(({ month, name, first, second }) => (
+                  <div
+                    className={`month-column ${month === "OCT" ? "month-current" : ""}`}
+                    key={month}
+                    role="group"
+                    aria-label={`${name}: 15th cutoff reserve level ${first} out of 100; month-end reserve level ${second} out of 100. Illustrative.`}
+                    title={`${name}: first cutoff ${first}/100, month-end ${second}/100 (illustrative reserve levels)`}
+                  >
                     <div className="month-bars" aria-hidden="true">
-                      <span className={`month-bar bar-${first}`} />
-                      <span className={`month-bar month-bar-muted bar-${second}`} />
+                      <span className="month-bar" style={{ "--bar-level": `${first}%` } as CSSProperties} />
+                      <span className="month-bar month-bar-muted" style={{ "--bar-level": `${second}%` } as CSSProperties} />
                     </div>
                     <span className="month-label">{month}</span>
                   </div>

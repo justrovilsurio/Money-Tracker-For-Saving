@@ -327,6 +327,7 @@ export default async function DashboardPage() {
 
         <footer className="overview-footer">
           <span>Balances and payment amounts are manually entered estimates, not live bank data.</span>
+          <Link href="/dashboard/spending">Record a cash expense<ArrowNarrowRightIcon size={14} /></Link>
           <Link href="/dashboard/obligations">Add another bill<ArrowNarrowRightIcon size={14} /></Link>
         </footer>
       </div>
