@@ -74,7 +74,7 @@ export default async function CutoffIncomePage() {
     <main className="setup-page" id="main-content" tabIndex={-1}>
       <WorkspaceHeader current="income" />
       <section className="setup-card income-card">
-        <Link className="income-back" href="/dashboard/accounts"><ArrowNarrowRightIcon size={14} className="icon-rotate-left" />Back to accounts</Link>
+        <Link className="income-back" href="/dashboard"><ArrowNarrowRightIcon size={14} className="icon-rotate-left" />Back to overview</Link>
         <p className="eyebrow">YOUR INCOME</p>
         <h1>Record income received.</h1>
         <p className="setup-intro">Enter what came in for one cutoff, or enter the whole month's income and split it across both cutoffs.</p>

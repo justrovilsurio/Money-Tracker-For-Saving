@@ -12,22 +12,23 @@ This project uses a light-first, accessibility-first adaptation of the UI Pro Ma
 
 | Role | Token | Value |
 | --- | --- | --- |
-| Page canvas | `--background` | `#F7F8F5` |
+| Page canvas | `--background` | `#F3F6F1` |
 | Main surface | `--surface` | `#FFFFFF` |
-| Primary text | `--foreground` | `#18211F` |
-| Secondary text | `--muted-foreground` | `#596560` |
-| Primary / trust | `--primary` | `#1E40AF` |
-| Positive / savings | `--positive` | `#047857` |
+| Primary text | `--foreground` | `#18251D` |
+| Secondary text | `--muted-foreground` | `#526157` |
+| Primary / trust | `--primary` | `#18251D` |
+| Action / active | `--accent` | `#B7FF72` |
+| Positive / savings | `--positive` | `#315E3E` |
 | Attention | `--warning` | `#A16207` |
 | Error | `--destructive` | `#B42318` |
-| Borders | `--border` | `#DDE3DF` |
-| Focus ring | `--ring` | `#1D4ED8` |
+| Borders | `--border` | `#D8E2D7` |
+| Focus ring | `--ring` | `#315E3E` |
 
 Use semantic tokens, not per-component hex values. Verify text contrast at 4.5:1 for normal text; do not use color alone to show paid/overdue/positive state.
 
 ## Typography and layout
 
-- Use a neutral sans-serif family with system fallbacks; keep financial values tabular and aligned.
+- Use General Sans for display headings and Switzer for interface text and financial figures, with system fallbacks; keep financial values tabular and aligned.
 - Body text at 16px or larger, line height around 1.5. Headings use a compact, clear scale.
 - Use a consistent 4/8px spacing rhythm and a readable content width around 1200px.
 - Mobile first: no horizontal scrolling at 375px; collapse navigation and card grids deliberately.
@@ -42,8 +43,8 @@ Use semantic tokens, not per-component hex values. Verify text contrast at 4.5:1
 
 ## Motion
 
-- Motion dial: 3/10. Use short opacity/transform transitions for menu, cutoff selection, and progress updates.
-- Use the same brief, staggered page-load entrance on the overview and signed-in management pages, including cutoff income, bills and installments, and accounts. Keep forms and saved rows readable immediately; do not add scroll-triggered reveals inside the signed-in workspace.
+- Motion dial: 6/10. Keep ordinary control transitions short; use the pronounced overview scroll reveal and restrained page entrance for content hierarchy.
+- Use the same brief page entrance on the overview and signed-in management pages, including cutoff income, bills and installments, accounts, and authentication. Keep forms and saved rows readable immediately. Saved payment and account rows may reveal as they enter view, with a short rise and opacity transition.
 - On the overview, use native CSS scroll-driven animation for a sticky, compacting spend hero and pronounced viewport-entry reveals on Payday Details, Upcoming Payments, and Accounts using upward movement, a subtle scale-up, blur-to-sharp, and opacity. On touch screens, give payday cards, payment rows, and account rows their own scroll-entry movement because hover is unavailable. Preserve native document scrolling; keep content static and visible for unsupported browsers and reduced-motion preferences.
 - Honor `prefers-reduced-motion`; reduced-motion users see final states without animation.
 - Animate `opacity` and `transform`; avoid layout-changing animation for money values.

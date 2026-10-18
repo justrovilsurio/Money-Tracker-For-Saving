@@ -152,6 +152,7 @@ Use General Sans for display headings and Switzer for interface text, labels, an
 - Use full-width, at least 44px-tall controls on touch screens. Stack account fields and edit controls on narrow screens; introduce multi-column form grids only when the viewport has enough space.
 - Style selects consistently with a clear chevron, adequate right padding, visible keyboard focus, readable option contrast, and native interaction semantics.
 - On small screens, keep the brand and Sign out together in the header first row and wrap the four primary page links beneath them in a balanced two-column grid. Keep Sign out separate from the navigation links. Clearly mark the current page with both a visual active state and aria-current="page"; avoid horizontal scrolling.
+- On the signed-out sample preview at phone widths, keep the breadcrumb on its own line, place the illustrative-data label on a separate row, and keep Sign in and Create account together below it. At desktop widths, let dashboard panels keep their content height and flow in a balanced two-column grid instead of stretching into empty space.
 - Keep numeric inputs readable, allow long account names to wrap, and make action buttons easy to reach without horizontal scrolling.
 
 ### Motion
