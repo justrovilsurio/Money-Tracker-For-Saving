@@ -36,9 +36,9 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/page.tsx": {
-    "mtime": 1792159074.9043913,
-    "seen": 1792159170.9774616,
-    "ast_hash": "ea91ab9c3bfe7c1e7ee4b174c56fad46",
+    "mtime": 1792311624.936405,
+    "seen": 1792311653.8497436,
+    "ast_hash": "68e8869c66eba2b3815751c7788cb11c",
     "semantic_hash": ""
   },
   "src/app/layout.tsx": {
@@ -48,9 +48,9 @@
     "semantic_hash": ""
   },
   "src/app/page.tsx": {
-    "mtime": 1792157404.8608096,
-    "seen": 1792157411.8032758,
-    "ast_hash": "0d38e6c49a515270ed0314ff7b94e6c0",
+    "mtime": 1792311857.3346963,
+    "seen": 1792311911.3852782,
+    "ast_hash": "f749c08fa11e1578c8cc44c137639ff9",
     "semantic_hash": ""
   },
   "src/app/setup/page.tsx": {
@@ -138,9 +138,9 @@
     "semantic_hash": ""
   },
   "DESIGN.md": {
-    "mtime": 1792309812.5080743,
-    "seen": 1792310631.9119058,
-    "ast_hash": "8a5352f6826daef0882e05b8e05aa706",
+    "mtime": 1792311858.7352712,
+    "seen": 1792311911.4047954,
+    "ast_hash": "0ccb96e9adf298258eba78d991938ef4",
     "semantic_hash": ""
   },
   "PROMPTS.md": {
@@ -156,9 +156,9 @@
     "semantic_hash": ""
   },
   "design-system/money-tracker-for-savings/MASTER.md": {
-    "mtime": 1792309318.29162,
-    "seen": 1792309564.9524279,
-    "ast_hash": "b8aaa7294d41cd60f7478a76d043f5a4",
+    "mtime": 1792311859.3639853,
+    "seen": 1792311911.405797,
+    "ast_hash": "888fe97ec0d1f247c51e556da295358c",
     "semantic_hash": ""
   },
   "next-env.d.ts": {
@@ -336,9 +336,9 @@
     "semantic_hash": ""
   },
   "src/app/dashboard/obligations/page.tsx": {
-    "mtime": 1792156925.4359784,
-    "seen": 1792156939.3926349,
-    "ast_hash": "ea5612ba651ddd25d02d17cc7a7bc377",
+    "mtime": 1792310865.2112298,
+    "seen": 1792311487.551106,
+    "ast_hash": "c2738977bec15224752866b0acc62923",
     "semantic_hash": ""
   },
   "src/app/dashboard/workspace-nav.tsx": {
@@ -369,6 +369,12 @@
     "mtime": 1792156925.437979,
     "seen": 1792156939.3896375,
     "ast_hash": "b0be89a142108a6dd90a8ccc5420dd74",
+    "semantic_hash": ""
+  },
+  "src/components/ui/roulette-amount.tsx": {
+    "mtime": 1792311225.1155703,
+    "seen": 1792311487.5661232,
+    "ast_hash": "7979f59b3748ba238b80fbb8d0c0b8d7",
     "semantic_hash": ""
   }
 }

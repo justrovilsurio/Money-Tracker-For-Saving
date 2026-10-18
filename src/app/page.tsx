@@ -18,6 +18,7 @@ import LayersIcon from "@/components/ui/layers-icon";
 import ShieldCheck from "@/components/ui/shield-check";
 import ShoppingCartIcon from "@/components/ui/shopping-cart-icon";
 import WalletIcon from "@/components/ui/wallet-icon";
+import { RouletteAmount } from "@/components/ui/roulette-amount";
 
 const bills = [
   { name: "ShopeePay installment", source: "ShopeePay", date: "Oct 22", cutoff: "Oct 15", amount: "₱2,450", icon: CreditCardIcon, tone: "orange" },
@@ -114,7 +115,7 @@ export default async function Home() {
             </div>
             <div className="cutoff-banner-right">
               <p>SAFE TO SPEND</p>
-              <strong>₱25,110<span>.00</span></strong>
+              <strong><RouletteAmount value="₱25,110.00" /></strong>
               <small>after bills, savings & purchases</small>
             </div>
             <div className="banner-sparkle banner-sparkle-one" aria-hidden="true" />
@@ -124,22 +125,22 @@ export default async function Home() {
           <section className="summary-grid reveal" aria-label="October 16 to 31 cutoff summary">
             <article className="summary-card">
               <div className="summary-card-top"><span>Cutoff income</span><span className="summary-icon summary-blue"><ArrowNarrowDownIcon size={34} /></span></div>
-              <strong>₱34,500<span>.00</span></strong>
+              <strong><RouletteAmount value="₱34,500.00" /></strong>
               <small>Expected on Oct 30</small>
             </article>
             <article className="summary-card">
               <div className="summary-card-top"><span>Bills to reserve</span><span className="summary-icon summary-amber"><LayersIcon size={34} /></span></div>
-              <strong>₱3,200<span>.00</span></strong>
+              <strong><RouletteAmount value="₱3,200.00" /></strong>
               <small>1 payment assigned</small>
             </article>
             <article className="summary-card">
               <div className="summary-card-top"><span>Savings plan</span><span className="summary-icon summary-green"><ArrowNarrowUpIcon size={34} /></span></div>
-              <strong>₱5,000<span>.00</span></strong>
+              <strong><RouletteAmount value="₱5,000.00" /></strong>
               <small>₱2,500 transferred so far</small>
             </article>
             <article className="summary-card summary-card-highlight">
               <div className="summary-card-top"><span>Spent this cutoff</span><span className="summary-icon summary-violet"><WalletIcon size={34} /></span></div>
-              <strong>₱1,190<span>.00</span></strong>
+              <strong><RouletteAmount value="₱1,190.00" /></strong>
               <small>Across 3 purchases</small>
             </article>
           </section>

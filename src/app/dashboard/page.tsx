@@ -7,6 +7,7 @@ import CreditCardIcon from "@/components/ui/credit-card";
 import { FundingSourcesPanel, type FundingSource } from "@/app/dashboard/funding-sources-panel";
 import ShoppingCartIcon from "@/components/ui/shopping-cart-icon";
 import WalletIcon from "@/components/ui/wallet-icon";
+import { RouletteAmount } from "@/components/ui/roulette-amount";
 import { requireUser } from "@/lib/auth/require-user";
 import { getSupabasePublicEnv } from "@/lib/supabase/env";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
@@ -119,7 +120,7 @@ function SummaryCard({ label, value, detail, tone, icon }: {
   return (
     <article className="summary-card">
       <div className="summary-card-top"><span>{label}</span><span className={`summary-icon summary-${tone}`} aria-hidden="true">{icon}</span></div>
-      <strong>{value}</strong>
+      <strong><RouletteAmount key={value} value={value} /></strong>
       <small>{detail}</small>
     </article>
   );
@@ -236,7 +237,10 @@ export default async function DashboardPage() {
           <div>
             <p className="eyebrow eyebrow-light">ESTIMATED LEFT TO SPEND</p>
             <strong className={estimatedAvailable !== null && estimatedAvailable < 0 ? "amount-negative" : ""}>
-              {estimatedAvailable === null ? "Add cutoff income" : formatMoney(estimatedAvailable, currencyCode)}
+              <RouletteAmount
+                key={`${estimatedAvailable ?? "empty"}-${currencyCode}`}
+                value={estimatedAvailable === null ? "Add cutoff income" : formatMoney(estimatedAvailable, currencyCode)}
+              />
             </strong>
             <small>Latest cutoff income − payment reserves − savings target − spending through {formatDate(period.end)}</small>
           </div>
@@ -267,7 +271,12 @@ export default async function DashboardPage() {
               return (
                 <article className="cutoff-pair-card" key={date}>
                   <span>{index === 0 ? "First cutoff" : "Second cutoff"} · {formatDate(date)}</span>
-                  <strong>{amount === undefined ? "Add income" : formatMoney(amount, currencyCode)}</strong>
+                  <strong>
+                    <RouletteAmount
+                      key={`${amount ?? "empty"}-${date}-${currencyCode}`}
+                      value={amount === undefined ? "Add income" : formatMoney(amount, currencyCode)}
+                    />
+                  </strong>
                   <small>{formatMoney(reserves, currencyCode)} reserved for payments</small>
                   {amount !== undefined ? <small>{formatMoney(amount - reserves, currencyCode)} after payment reserves</small> : null}
                 </article>
